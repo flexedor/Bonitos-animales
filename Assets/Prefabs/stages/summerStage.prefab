@@ -430,6 +430,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b25397e34de9b8648b8b72a73099bfb2, type: 2}
+    - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
+      propertyPath: animalsInCurrentBiom.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
+      propertyPath: animalsInCurrentBiom.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: c7b8ffcab4bb6174693f562cd5eee04d, type: 2}
+    - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
+      propertyPath: animalsInCurrentBiom.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: c7b8ffcab4bb6174693f562cd5eee04d, type: 2}
+    - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
+      propertyPath: animalsInCurrentBiom.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: c7b8ffcab4bb6174693f562cd5eee04d, type: 2}
     - target: {fileID: 5522820577253924050, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
