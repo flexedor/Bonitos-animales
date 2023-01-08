@@ -798,6 +798,7 @@ MonoBehaviour:
   stages:
   - {fileID: 9004387951635401985, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
   - {fileID: 8904328161028292246, guid: 76863dd0a230e764cb3b4bd70649a6ed, type: 3}
+  - {fileID: 1613637316290655706, guid: c54d28f4126482a409a252d45ba55983, type: 3}
   _currentStage: 0
 --- !u!1 &1364376956
 GameObject:
