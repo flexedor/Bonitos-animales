@@ -567,4 +567,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0760337f4eccf934088ea6cc1637e0b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stageData: {fileID: 0}
+  animalsInCurrentBiom: []

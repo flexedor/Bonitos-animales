@@ -1,11 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TouchInputController : MonoBehaviour
 {
-    [SerializeField] private GameObject colitionSfere; 
-    // Update is called once per frame
+    [SerializeField] private GameObject colitionSfere;
     void FixedUpdate()
     {
         if (Input.touchCount>0)
@@ -20,5 +20,7 @@ public class TouchInputController : MonoBehaviour
         {
             colitionSfere.SetActive(false);
         }
+        
     }
+    
 }

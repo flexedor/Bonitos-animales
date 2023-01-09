@@ -6,7 +6,7 @@ using Random = UnityEngine.Random;
 
 public class StageController : MonoBehaviour
 {
-    [SerializeField] private List<AnimalData>animalsInCurrentBiom = new List<AnimalData>();
+    [SerializeField] private List<GameObject>animalsInCurrentBiom = new List<GameObject>();
     private List<GameObject> _animalsOnStage;
 
     private void Awake()
@@ -14,8 +14,8 @@ public class StageController : MonoBehaviour
         foreach (var VARIABLE in animalsInCurrentBiom)
         {
             var position = transform.position;
-            Vector3 place_to_spavn = new Vector3(position.x+Random.Range(-3,3),position.y,position.z+Random.Range(-3,3));
-            GameObject tmp_animal = Instantiate(VARIABLE.AnimalPrefab, place_to_spavn, Quaternion.identity,transform);
+            Vector3 place_to_spavn = new Vector3(position.x+Random.Range(-2,3),position.y+0.5f,position.z+Random.Range(-2,3));
+            GameObject tmp_animal = Instantiate(VARIABLE, place_to_spavn,  Quaternion.identity,transform);
             
             _animalsOnStage?.Add( tmp_animal);
         }

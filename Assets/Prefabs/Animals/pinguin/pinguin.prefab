@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4647849053497784101}
   - component: {fileID: 8588260602681620608}
   - component: {fileID: 5821842369280019530}
+  - component: {fileID: 6342663835758253772}
+  - component: {fileID: -480175462757922840}
   m_Layer: 0
   m_Name: pinguin
   m_TagString: Untagged
@@ -85,3 +87,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6342663835758253772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5461646689526787487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4039eb7978548498f69665ed5591e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _feed: 20
+  _pet: 30
+  _clean: 40
+  _name: Penguin
+  animalBiome: 0
+--- !u!65 &-480175462757922840
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5461646689526787487}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.011, y: 0.01, z: 0.01}
+  m_Center: {x: 0, y: 0, z: -0.004}
