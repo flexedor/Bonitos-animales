@@ -70,11 +70,13 @@ public class GameController : MonoBehaviour
         Debug.Log("Prev Level");
         if (_curretStageState==StageState.Zoo)
         {
-            LoadLevel(--CurrentZooStage,zooStages);    
+            --CurrentZooStage;
+            LoadLevel(CurrentZooStage,zooStages);    
         }
         else
         {
-            LoadLevel(--CurrentResquingStage,resquingStages);    
+            --CurrentResquingStage;
+            LoadLevel(CurrentResquingStage,resquingStages);    
         }
        
     } 
@@ -83,11 +85,13 @@ public class GameController : MonoBehaviour
         Debug.Log("Next Level");
         if (_curretStageState==StageState.Zoo)
         {
-            LoadLevel(++CurrentZooStage,zooStages);    
+            ++CurrentZooStage;
+            LoadLevel(CurrentZooStage,zooStages);    
         }
         else
         {
-            LoadLevel(++CurrentResquingStage,resquingStages);    
+            ++CurrentResquingStage;
+            LoadLevel(CurrentResquingStage,resquingStages);    
         }
     }
     
