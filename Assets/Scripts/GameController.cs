@@ -2,24 +2,45 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GameController : MonoBehaviour
 {
     public static GameController Instance;
-   
-    [SerializeField]
-    private List<GameObject> stages;
 
-    [SerializeField]
-    private int _currentStage;
-
-    public int CurrentStage
+    enum StageState
     {
-        get => _currentStage;
+        Zoo,
+        Resquing 
+    }
+    private StageState _curretStageState;
+    
+    [FormerlySerializedAs("Zoo Stages")] [SerializeField]
+    private List<GameObject> zooStages;
+    [FormerlySerializedAs("Resquing Stages")] [SerializeField]
+    private List<GameObject> resquingStages;
+   // [FormerlySerializedAs("_currentStage")] [SerializeField]
+    private int _currentZooStage;
+    private int _currentResqungStage;
+    
+    public int CurrentZooStage
+    {
+        get => _currentZooStage;
         set  {
-            if (value>=0&&value<stages.Count)
+            if (value>=0&&value<zooStages.Count)
             {
-                _currentStage = value;
+                _currentZooStage = value;
+            }
+            
+        }
+    }
+    public int CurrentResquingStage
+    {
+        get => _currentResqungStage;
+        set  {
+            if (value>=0&&value<resquingStages.Count)
+            {
+                _currentResqungStage = value;
             }
             
         }
@@ -29,34 +50,89 @@ public class GameController : MonoBehaviour
     
     private void Awake()
     {
+        UIMenuController.onZooBtn += SwitchToZoo;
+        UIMenuController.onResquingBtn += SwitchToResquing;
+        _curretStageState = StageState.Zoo;
         Instance = this;
-        CurrentStage = 0;
-        LoadLevel(CurrentStage);
+        CurrentZooStage = 0;
+        CurrentResquingStage = 0;
+        LoadLevel(CurrentZooStage,zooStages);
     }
+
+    private void OnDestroy()
+    {
+        UIMenuController.onZooBtn -= SwitchToZoo;
+        UIMenuController.onResquingBtn -= SwitchToResquing;
+    }
+
     public void PrevLevel()
     {
         Debug.Log("Prev Level");
-        LoadLevel(--CurrentStage);    
+        if (_curretStageState==StageState.Zoo)
+        {
+            LoadLevel(--CurrentZooStage,zooStages);    
+        }
+        else
+        {
+            LoadLevel(--CurrentResquingStage,resquingStages);    
+        }
+       
     } 
     public void NextLevel()
     {
         Debug.Log("Next Level");
-        LoadLevel(++CurrentStage);    
+        if (_curretStageState==StageState.Zoo)
+        {
+            LoadLevel(++CurrentZooStage,zooStages);    
+        }
+        else
+        {
+            LoadLevel(++CurrentResquingStage,resquingStages);    
+        }
     }
     
     private void RestartLevel()
     {
         Debug.Log("Restart Level");
-        LoadLevel(CurrentStage);
+        if (_curretStageState==StageState.Zoo)
+        {
+            LoadLevel(CurrentZooStage,zooStages);    
+        }
+        else
+        {
+            LoadLevel(CurrentResquingStage,resquingStages);    
+        }
     }
 
-    private void LoadLevel(int numToLoad)
+    private void LoadLevel(int numToLoad,List<GameObject> sceensToLoad)
     {
         Destroy(_currentStageObstical);
-        _currentStageObstical = Instantiate(stages[CurrentStage],transform.position, 
+        _currentStageObstical = Instantiate(sceensToLoad[numToLoad],transform.position, 
             Quaternion.identity, transform);
         
         
+    }
+    
+    void SwitchToZoo()
+    {
+        setPlatform(StageState.Zoo);
+    }
+
+    void SwitchToResquing()
+    {
+        setPlatform(StageState.Resquing);
+    }
+    private void setPlatform(StageState state)
+    {
+        _curretStageState = state;
+        if (_curretStageState==StageState.Zoo)
+        {
+            LoadLevel(CurrentZooStage,zooStages);    
+        }
+        else
+        {
+            LoadLevel(CurrentResquingStage,resquingStages);    
+        }
     }
     void Update()
     {

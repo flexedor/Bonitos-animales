@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class StageController : MonoBehaviour
+public class ZooStageController : MonoBehaviour
 {
     [SerializeField] private List<GameObject>animalsInCurrentBiom = new List<GameObject>();
     private List<GameObject> _animalsOnStage;
