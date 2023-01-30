@@ -11,10 +11,7 @@ public class EmitorScript : MonoBehaviour
 
    public float PositionX
    {
-      get
-      {
-         return _positionX;
-      }
+      get => _positionX;
       set {
          if (-borderLim<value && value<borderLim)
          {

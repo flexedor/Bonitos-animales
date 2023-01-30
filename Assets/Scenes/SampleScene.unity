@@ -1157,6 +1157,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 999805462}
+        m_TargetAssemblyTypeName: VibrationController, Assembly-CSharp
+        m_MethodName: VibrateMid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &324216241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2278,6 +2290,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 999805462}
+        m_TargetAssemblyTypeName: VibrationController, Assembly-CSharp
+        m_MethodName: VibrateMid
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &857567162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2763,6 +2787,7 @@ GameObject:
   - component: {fileID: 999805459}
   - component: {fileID: 999805460}
   - component: {fileID: 999805461}
+  - component: {fileID: 999805462}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -2816,6 +2841,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colitionSfere: {fileID: 380230721}
+--- !u!114 &999805462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999805458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0291377b9873c2c4b95f7b522a86ed86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1024953931
 GameObject:
   m_ObjectHideFlags: 0
