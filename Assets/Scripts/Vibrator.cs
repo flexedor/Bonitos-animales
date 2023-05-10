@@ -8,7 +8,7 @@ public static  class Vibrator
    private static AndroidJavaObject vibrator = currentActivyty.Call<AndroidJavaObject>("getSystemService", "vibrator");
 #else
    private static AndroidJavaClass unityPlayer;
-   private static AndroidJavaObject currentActivyty 
+    private static AndroidJavaObject currentActivyty;
    private static AndroidJavaObject vibrator;
 #endif
    public static void Vibrate(long milliseconds = 250)
