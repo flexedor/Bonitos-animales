@@ -568,3 +568,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalsInCurrentBiom: []
+  IsCustomCameraIsOn: 0
+  IsCustomCoordsIsOn: 0
+  customCameraPosition: {x: 0, y: 0, z: 0}
+  customStagePosition: {x: 0, y: 0, z: 0}
+  customCameraRotation: {x: 0, y: 0, z: 0, w: 0}

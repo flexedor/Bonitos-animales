@@ -16,6 +16,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 1ea9f06a678176f4e8a48fed8bdefde5, type: 2}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
+      propertyPath: IsCustomCameraIsOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
+      propertyPath: IsCustomCoordsIsOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
+      propertyPath: customCameraPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.size
       value: 2
       objectReference: {fileID: 0}

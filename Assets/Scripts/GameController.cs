@@ -19,7 +19,6 @@ public class GameController : MonoBehaviour
     private List<GameObject> zooStages;
     [FormerlySerializedAs("Resquing Stages")] [SerializeField]
     private List<GameObject> resquingStages;
-   // [FormerlySerializedAs("_currentStage")] [SerializeField]
     private int _currentZooStage;
     private int _currentResqungStage;
     
