@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class EmitorScript : MonoBehaviour
 {
-   [SerializeField] private GameObject BulletPrefab;
-   private float _positionX;
-   [SerializeField] private float borderLim = 1.5f;
+    [SerializeField] private GameObject BulletPrefab;
+    [SerializeField] private float borderLim = 1.5f;
+    [SerializeField] private float stepOfCannonToMove = 0.1f;
+    private float _positionX;
+    private GameObject ball = null;
 
-   public float PositionX
+    public float PositionX
    {
       get => _positionX;
       set {
@@ -36,18 +38,21 @@ public class EmitorScript : MonoBehaviour
 
    void Shoot()
    {
-      Instantiate(BulletPrefab,transform.position, Quaternion.identity, transform);
+        if (ball == null)
+        {
+            ball = Instantiate(BulletPrefab, transform.position, Quaternion.identity, transform);
+        }
    }
 
    void MoveCannonLeft()
    {
-      PositionX -= 0.1f;
+      PositionX -= stepOfCannonToMove;
       SetPosition();
    }
 
    void MoveCannonRight()
    {
-      PositionX += 0.1f;
+      PositionX += stepOfCannonToMove;
       SetPosition();
    }
 
