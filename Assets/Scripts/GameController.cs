@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
     [FormerlySerializedAs("Zoo Stages")] [SerializeField]
     private List<GameObject> zooStages;
     [FormerlySerializedAs("Resquing Stages")] [SerializeField]
-    private List<GameObject> resquingStages;
+    public List<GameObject> resquingStages;
     private int _currentZooStage;
     private int _currentResqungStage;
     
@@ -51,6 +51,7 @@ public class GameController : MonoBehaviour
     {
         UIMenuController.onZooBtn += SwitchToZoo;
         UIMenuController.onResquingBtn += SwitchToResquing;
+        LevelButtonScript.onClickLevel += OnChoosingResquingLevel;
         _curretStageState = StageState.Zoo;
         Instance = this;
         CurrentZooStage = 0;
@@ -62,6 +63,7 @@ public class GameController : MonoBehaviour
     {
         UIMenuController.onZooBtn -= SwitchToZoo;
         UIMenuController.onResquingBtn -= SwitchToResquing;
+        LevelButtonScript.onClickLevel -= OnChoosingResquingLevel;
     }
 
     public void PrevLevel()
@@ -125,6 +127,11 @@ public class GameController : MonoBehaviour
     {
         setPlatform(StageState.Resquing);
     }
+    private void OnChoosingResquingLevel(int levelToLoad)
+    {
+        setPlatform(StageState.Resquing);
+        LoadLevel(levelToLoad, resquingStages);
+    }
     private void setPlatform(StageState state)
     {
         _curretStageState = state;
@@ -137,6 +144,7 @@ public class GameController : MonoBehaviour
             LoadLevel(CurrentResquingStage,resquingStages);    
         }
     }
+    
     void Update()
     {
 #if UNITY_EDITOR

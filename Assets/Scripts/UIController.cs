@@ -12,16 +12,42 @@ public class UIController : MonoBehaviour
     [SerializeField] private Slider clean_slider;
     [SerializeField] private Slider feed_slider;
     [SerializeField] private Text NameOfAnimal;
+    [SerializeField] private GameObject LevelButton;
+    [SerializeField] private GameObject GridWithLevels;
+    [SerializeField] private GameController GameController;
+    [SerializeField] private GameObject ResquingMisssionControls;
+    [SerializeField] private GameObject LevelMenu;
+
 
     private AnimalScript _currentAnimalScript;
+  
     private void Awake()
     {
         AnimalScript.onColition += SetDataToAnimalUI;
+        LevelButtonScript.onClickLevel += OnRessquingLevelChoosing;
+        for (int i = 0; i< GameController.resquingStages.Count; i++ ) {
+
+            GameObject currentButton =  Instantiate(LevelButton);
+            Text buttonText= currentButton.GetComponentInChildren<Text>();
+            String CurrentLevel = (i+1).ToString();
+            buttonText.text = CurrentLevel;
+            currentButton.name="Level"+ CurrentLevel;
+            LevelButtonScript levelButtonScript = currentButton.GetComponentInChildren<LevelButtonScript>();
+            levelButtonScript.LevelInt = i;
+            currentButton.transform.SetParent(GridWithLevels.transform);
+        }
+
+    }
+    private void OnRessquingLevelChoosing(int level)
+    {
+        ResquingMisssionControls.SetActive(true);
+        LevelMenu.SetActive(false);
     }
 
     private void OnDestroy()
     {
         AnimalScript.onColition -= SetDataToAnimalUI;
+        LevelButtonScript.onClickLevel -= OnRessquingLevelChoosing;
     }
 
     private void SetDataToAnimalUI(AnimalScript obj)
@@ -34,14 +60,10 @@ public class UIController : MonoBehaviour
     {
         animalMenu.SetActive(true);
         NameOfAnimal.text = _currentAnimalScript.Name;
-        
         pet_slider.value = _currentAnimalScript.Pet;
         clean_slider.value = _currentAnimalScript.Clean;
         feed_slider.value = _currentAnimalScript.Feed;
-
-        
     }
-
     public void FeedCurrentAnimal()
     {
         _currentAnimalScript.FeedAnimal(10);
