@@ -18,6 +18,8 @@ public class ZooStageController : MonoBehaviour
     [SerializeField] private bool IsCustomCameraRotationIsOn = false;
     [SerializeField] private Quaternion customCameraRotation = new Quaternion();
 
+  
+    List<GameObject> AnchorPoints = new List<GameObject>();
 
 
     Camera mainCamera = null;
@@ -31,14 +33,35 @@ public class ZooStageController : MonoBehaviour
 
     private void OnEnable()
     {
-        foreach (var VARIABLE in animalsInCurrentBiom)
-        {
-            var position = transform.position;
-            Vector3 place_to_spavn = new Vector3(position.x+Random.Range(-2,3),position.y+0.5f,position.z+Random.Range(-2,3));
-            GameObject tmp_animal = Instantiate(VARIABLE, place_to_spavn,  Quaternion.identity,transform);
-            _animalsOnStage?.Add( tmp_animal);
+        AnchorPointScript[] objects = FindObjectsOfType<AnchorPointScript>();
+
+        // Add each object with the component to the list
+        foreach (AnchorPointScript objectWithComponent in objects) {
+            AnchorPoints.Add(objectWithComponent.gameObject);
         }
 
+        for (int i = 0; i < animalsInCurrentBiom.Count; i++)
+        {
+           
+                if (i >= 0 && i < AnchorPoints.Count)
+                {
+                    Vector3 position = AnchorPoints[i].transform.position;
+                    GameObject tmp_animal = Instantiate(animalsInCurrentBiom[i], position,  Quaternion.identity,transform);
+                    _animalsOnStage?.Add( tmp_animal);
+                }
+            
+            
+            
+        }
+        // foreach (var VARIABLE in animalsInCurrentBiom)
+        // {
+        //     var position = transform.position;
+        //     Vector3 place_to_spavn = new Vector3(position.x+Random.Range(-2,3),position.y+0.5f,position.z+Random.Range(-2,3));
+        //     GameObject tmp_animal = Instantiate(VARIABLE, place_to_spavn,  Quaternion.identity,transform);
+        //     _animalsOnStage?.Add( tmp_animal);
+        // }
+
+        
         // Find the main camera in the scene
         mainCamera = Camera.main;
         // Remember prev pos and rotation
