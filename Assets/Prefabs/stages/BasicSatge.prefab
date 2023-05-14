@@ -568,8 +568,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalsInCurrentBiom: []
-  IsCustomCameraIsOn: 0
-  IsCustomCoordsIsOn: 0
+  gameData: {fileID: 11400000, guid: 20143d4b0f1430b42862e9041ec86544, type: 2}
+  IsCustomCameraCoordsIsOn: 0
   customCameraPosition: {x: 0, y: 0, z: 0}
+  IsCustomLevelCoordsIsOn: 0
   customStagePosition: {x: 0, y: 0, z: 0}
+  IsCustomCameraRotationIsOn: 0
   customCameraRotation: {x: 0, y: 0, z: 0, w: 0}
+  stageBiome: 3

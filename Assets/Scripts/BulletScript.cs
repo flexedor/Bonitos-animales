@@ -6,13 +6,19 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    public static System.Action<GameObject> AnimalToAdd;
     private void OnCollisionEnter(Collision collision)
     {
-        BrickScript collided = collision.gameObject.GetComponent<BrickScript>();
-        if (collided!=null)
+        BrickScript brickScript = collision.gameObject.GetComponent<BrickScript>();
+        AnimalScript animalScript = collision.gameObject.GetComponent<AnimalScript>();
+        if (brickScript != null)
         {
-            Destroy(collided.gameObject);
+            Destroy(brickScript.gameObject);
             Destroy(this.gameObject);
+        }
+        if (animalScript != null)
+        {
+            AnimalToAdd?.Invoke(collision.gameObject);
         }
       
     }

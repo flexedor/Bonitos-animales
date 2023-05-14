@@ -15,7 +15,8 @@ public class AnimalScript : MonoBehaviour
     [SerializeField]
     private string _name;
     [SerializeField] 
-    public GameData.Biomes animalBiome;
+    public GameData.Biomes animalBiome=GameData.Biomes.Desert;
+    public GameObject instantiateGameObject; 
 
     private AnimalScript _instantiate;
     public int Feed

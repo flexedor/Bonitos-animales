@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
-
+using System;
+using System.Collections.Generic;
 [CreateAssetMenu]
 public class GameData : ScriptableObject
 {
@@ -16,6 +17,7 @@ public class GameData : ScriptableObject
         Rainforest,
         Steppe
     }
-    
+    [SerializeField]
+    public List<GameObject> animals = new List<GameObject>(); 
    
 }

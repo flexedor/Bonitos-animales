@@ -431,6 +431,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: b25397e34de9b8648b8b72a73099bfb2, type: 2}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
+      propertyPath: stageBiome
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: customStagePosition.x
       value: 0
       objectReference: {fileID: 0}

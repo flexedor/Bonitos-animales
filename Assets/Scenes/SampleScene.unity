@@ -2977,18 +2977,6 @@ MonoBehaviour:
   - {fileID: 8904328161028292246, guid: 76863dd0a230e764cb3b4bd70649a6ed, type: 3}
   resquingStages:
   - {fileID: 3370261429761707570, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
-  - {fileID: 3370261429761707570, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
-  - {fileID: 3370261429761707570, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
-  - {fileID: 3370261429761707570, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
-  - {fileID: 3370261429761707570, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
-  - {fileID: 3370261429761707570, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
-  - {fileID: 3370261429761707570, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
-  - {fileID: 3370261429761707570, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
-  - {fileID: 3370261429761707570, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
-  - {fileID: 3370261429761707570, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
-  - {fileID: 3370261429761707570, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
-  - {fileID: 3370261429761707570, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
-  - {fileID: 3370261429761707570, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
 --- !u!114 &999805461
 MonoBehaviour:
   m_ObjectHideFlags: 0

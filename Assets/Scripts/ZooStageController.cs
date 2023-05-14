@@ -7,7 +7,8 @@ using Random = UnityEngine.Random;
 public class ZooStageController : MonoBehaviour
 {
     [SerializeField] private List<GameObject>animalsInCurrentBiom = new List<GameObject>();
-   
+    [SerializeField] private GameData gameData;
+
     [SerializeField] private bool IsCustomCameraCoordsIsOn = false;
     [SerializeField] private Vector3 customCameraPosition = new Vector3();
 
@@ -17,13 +18,16 @@ public class ZooStageController : MonoBehaviour
     [SerializeField] private bool IsCustomCameraRotationIsOn = false;
     [SerializeField] private Quaternion customCameraRotation = new Quaternion();
 
+
+
     Camera mainCamera = null;
     private Vector3 prevCameraPosition = new Vector3();
     private Quaternion prevCameraRotation;
 
+
     private List<GameObject> _animalsOnStage;
 
-
+    public GameData.Biomes stageBiome = GameData.Biomes.Desert;
 
     private void OnEnable()
     {
@@ -77,5 +81,31 @@ public class ZooStageController : MonoBehaviour
             this.gameObject.transform.position = customStagePosition;
         }
     }
+    public void addAnimal(GameObject animalToAdd)
+    {
+        AnimalScript animalComponent = animalToAdd.GetComponent<AnimalScript>();
+        if (animalComponent!=null)
+        {
+            if (animalComponent.animalBiome== stageBiome) {
+                // Create a copy of the GameObject
+                for(int i = 0; i < gameData.animals.Count; i++)
+                {
+                    AnimalScript animalComponentinData = gameData.animals[i].GetComponent<AnimalScript>();
+                    if (animalComponent.Name== animalComponentinData.Name)
+                    {
+                       
+                        animalsInCurrentBiom.Add(gameData.animals[i]);
+                    }
+                }
+              
+            }
+           
+        }
+        else
+        {
+            Debug.Log("No animal script in object");
+        }
+      
+    }  
 
 }

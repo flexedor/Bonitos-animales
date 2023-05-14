@@ -16,6 +16,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 1ea9f06a678176f4e8a48fed8bdefde5, type: 2}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
+      propertyPath: stageBiome
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: IsCustomCameraIsOn
       value: 1
       objectReference: {fileID: 0}
@@ -29,16 +33,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.data[0]
       value: 
-      objectReference: {fileID: 5461646689526787487, guid: 0f23a96347ac06a4b95d7f9e10366bd6, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.data[1]
       value: 
-      objectReference: {fileID: 5461646689526787487, guid: 0f23a96347ac06a4b95d7f9e10366bd6, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 9004387949639837792, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

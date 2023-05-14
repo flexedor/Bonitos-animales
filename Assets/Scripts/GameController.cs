@@ -52,6 +52,7 @@ public class GameController : MonoBehaviour
         UIMenuController.onZooBtn += SwitchToZoo;
         UIMenuController.onResquingBtn += SwitchToResquing;
         LevelButtonScript.onClickLevel += OnChoosingResquingLevel;
+        BulletScript.AnimalToAdd += addAnimalToproperBiom;
         _curretStageState = StageState.Zoo;
         Instance = this;
         CurrentZooStage = 0;
@@ -64,6 +65,7 @@ public class GameController : MonoBehaviour
         UIMenuController.onZooBtn -= SwitchToZoo;
         UIMenuController.onResquingBtn -= SwitchToResquing;
         LevelButtonScript.onClickLevel -= OnChoosingResquingLevel;
+        BulletScript.AnimalToAdd -= addAnimalToproperBiom;
     }
 
     public void PrevLevel()
@@ -160,5 +162,13 @@ public class GameController : MonoBehaviour
         }
 
 #endif
+    }
+    private void addAnimalToproperBiom(GameObject animalToAdd)
+    {
+        foreach(GameObject stage in zooStages)
+        {
+            ZooStageController zoo= stage.GetComponent<ZooStageController>();
+            zoo.addAnimal(animalToAdd);
+        }
     }
 }
