@@ -48,6 +48,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 0}
   borderLim: 1.5
   stepOfCannonToMove: 0.1
+  isBallStickToCannon: 0
 --- !u!1001 &8926558321880225370
 PrefabInstance:
   m_ObjectHideFlags: 0

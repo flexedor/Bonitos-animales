@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EmitorScript : MonoBehaviour
+public class CannonScript : MonoBehaviour
 {
     [SerializeField] private GameObject BulletPrefab;
     [SerializeField] private float borderLim = 1.5f;
     [SerializeField] private float stepOfCannonToMove = 0.1f;
+    [SerializeField] private bool isBallStickToCannon=false;
     private float _positionX;
     private GameObject ball = null;
 
@@ -40,7 +41,7 @@ public class EmitorScript : MonoBehaviour
    {
         if (ball == null)
         {
-            ball = Instantiate(BulletPrefab, transform.position, Quaternion.identity, transform);
+           ball = Instantiate(BulletPrefab, transform.position, Quaternion.identity, isBallStickToCannon ? transform : transform.parent);
         }
    }
 
