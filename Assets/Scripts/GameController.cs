@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     
     [FormerlySerializedAs("Zoo Stages")] [SerializeField]
     private List<GameObject> zooStages;
-    [FormerlySerializedAs("Resquing Stages")] [SerializeField]
+    [FormerlySerializedAs("Rescuing Stages")] [SerializeField]
     public List<GameObject> resquingStages;
     private int _currentZooStage;
     private int _currentResqungStage;
@@ -52,6 +52,7 @@ public class GameController : MonoBehaviour
         UIMenuController.onZooBtn += SwitchToZoo;
         UIMenuController.onResquingBtn += SwitchToResquing;
         LevelButtonScript.onClickLevel += OnChoosingResquingLevel;
+        BulletScript.NextResqueLevel += NextLevel;
         BulletScript.AnimalToAdd += addAnimalToproperBiom;
         _curretStageState = StageState.Zoo;
         Instance = this;
@@ -66,6 +67,7 @@ public class GameController : MonoBehaviour
         UIMenuController.onResquingBtn -= SwitchToResquing;
         LevelButtonScript.onClickLevel -= OnChoosingResquingLevel;
         BulletScript.AnimalToAdd -= addAnimalToproperBiom;
+        BulletScript.NextResqueLevel -= NextLevel;
     }
 
     public void PrevLevel()
@@ -83,6 +85,7 @@ public class GameController : MonoBehaviour
         }
        
     } 
+    // ReSharper disable Unity.PerformanceAnalysis
     public void NextLevel()
     {
         Debug.Log("Next Level");
@@ -131,6 +134,7 @@ public class GameController : MonoBehaviour
     }
     private void OnChoosingResquingLevel(int levelToLoad)
     {
+        CurrentResquingStage = levelToLoad;
         setPlatform(StageState.Resquing);
         LoadLevel(levelToLoad, resquingStages);
     }

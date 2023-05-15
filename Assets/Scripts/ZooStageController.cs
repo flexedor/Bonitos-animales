@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class ZooStageController : MonoBehaviour
@@ -9,7 +10,7 @@ public class ZooStageController : MonoBehaviour
     [SerializeField] private List<GameObject>animalsInCurrentBiom = new List<GameObject>();
     [SerializeField] private GameData gameData;
 
-    [SerializeField] private bool IsCustomCameraCoordsIsOn = false;
+    [SerializeField] private bool isCustomCameraCoordsIsOn = false;
     [SerializeField] private Vector3 customCameraPosition = new Vector3();
 
     [SerializeField] private bool IsCustomLevelCoordsIsOn = false;
@@ -42,26 +43,14 @@ public class ZooStageController : MonoBehaviour
 
         for (int i = 0; i < animalsInCurrentBiom.Count; i++)
         {
-           
-                if (i >= 0 && i < AnchorPoints.Count)
-                {
-                    Vector3 position = AnchorPoints[i].transform.position;
-                    GameObject tmp_animal = Instantiate(animalsInCurrentBiom[i], position,  Quaternion.identity,transform);
-                    _animalsOnStage?.Add( tmp_animal);
-                }
-            
-            
-            
-        }
-        // foreach (var VARIABLE in animalsInCurrentBiom)
-        // {
-        //     var position = transform.position;
-        //     Vector3 place_to_spavn = new Vector3(position.x+Random.Range(-2,3),position.y+0.5f,position.z+Random.Range(-2,3));
-        //     GameObject tmp_animal = Instantiate(VARIABLE, place_to_spavn,  Quaternion.identity,transform);
-        //     _animalsOnStage?.Add( tmp_animal);
-        // }
+            if (i < 0 || i >= AnchorPoints.Count) continue;
+            Vector3 position = AnchorPoints[i].transform.position;
+            GameObject tmp_animal = Instantiate(animalsInCurrentBiom[i], position,  Quaternion.identity,transform);
+            _animalsOnStage?.Add( tmp_animal);
 
-        
+
+
+        }
         // Find the main camera in the scene
         mainCamera = Camera.main;
         // Remember prev pos and rotation
@@ -84,7 +73,7 @@ public class ZooStageController : MonoBehaviour
     }
     private void setCameraPos()
     {
-        if (IsCustomCameraCoordsIsOn)
+        if (isCustomCameraCoordsIsOn)
         {
             mainCamera.transform.position = customCameraPosition;
           

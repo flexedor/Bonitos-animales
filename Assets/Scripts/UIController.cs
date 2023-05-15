@@ -17,6 +17,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameController GameController;
     [SerializeField] private GameObject ResquingMisssionControls;
     [SerializeField] private GameObject LevelMenu;
+    [SerializeField] private GameObject GameOverCanvas;
 
 
     private AnimalScript _currentAnimalScript;
@@ -25,6 +26,7 @@ public class UIController : MonoBehaviour
     {
         AnimalScript.onColition += SetDataToAnimalUI;
         LevelButtonScript.onClickLevel += OnRessquingLevelChoosing;
+        CannonScript.OnOutOfBalls += GameOver;
         for (int i = 0; i< GameController.resquingStages.Count; i++ ) {
 
             GameObject currentButton =  Instantiate(LevelButton);
@@ -48,6 +50,7 @@ public class UIController : MonoBehaviour
     {
         AnimalScript.onColition -= SetDataToAnimalUI;
         LevelButtonScript.onClickLevel -= OnRessquingLevelChoosing;
+        CannonScript.OnOutOfBalls -= GameOver;
     }
 
     private void SetDataToAnimalUI(AnimalScript obj)
@@ -68,6 +71,11 @@ public class UIController : MonoBehaviour
     {
         _currentAnimalScript.FeedAnimal(10);
         RenewData();
+    }
+
+    private void GameOver()
+    {
+        GameOverCanvas.SetActive(true);
     }
     public void PetCurrentAnimal()
     {
