@@ -30,7 +30,7 @@ public class ZooStageController : MonoBehaviour
 
     private List<GameObject> _animalsOnStage;
 
-    public GameData.Biomes stageBiome = GameData.Biomes.Desert;
+    public GameData.Biomes stageBiome = GameData.Biomes.Mountains;
 
     private void OnEnable()
     {

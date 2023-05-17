@@ -2986,9 +2986,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zooStages:
-  - {fileID: 9004387951635401985, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
-  - {fileID: 1613637316290655706, guid: c54d28f4126482a409a252d45ba55983, type: 3}
+  - {fileID: 7105381940315230299, guid: fa03ae2fbe4c7e2498338248c2b939a3, type: 3}
   - {fileID: 8904328161028292246, guid: 76863dd0a230e764cb3b4bd70649a6ed, type: 3}
+  - {fileID: 8871956023242404531, guid: 2605ab08fea006045bef625db5a66307, type: 3}
+  - {fileID: 1613637316290655706, guid: c54d28f4126482a409a252d45ba55983, type: 3}
+  - {fileID: 2786519909743400159, guid: c7b49320317501246a5a0ac1b84bacde, type: 3}
   resquingStages:
   - {fileID: 3030085771726436790, guid: ab3a7116f92bd6a4fbe7bc9ea3cb05aa, type: 3}
   - {fileID: 3030085771726436790, guid: 1d635b9f4a8987145bd4f0c2071aeb06, type: 3}

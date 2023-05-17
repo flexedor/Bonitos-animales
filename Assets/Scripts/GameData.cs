@@ -7,15 +7,11 @@ public class GameData : ScriptableObject
 {
     public enum Biomes
     {
-        Desert,
-        Iceland,
-        Swamp,
-        Forest,
-        Ocean,
-        Tundra,
-        Savanna,
-        Rainforest,
-        Steppe
+        Mountains,
+        Savannah,
+        Beach,
+        Winter,
+        Canyon
     }
     [SerializeField]
     public List<GameObject> animals = new List<GameObject>(); 
