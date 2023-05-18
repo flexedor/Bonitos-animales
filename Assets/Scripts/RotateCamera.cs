@@ -9,16 +9,15 @@ public class RotateCamera : MonoBehaviour
     public float maxY = 60f;
     public float minX = -60f;
     public float maxX = 60f;
-    public float swipeThreshold = 50f;
 
-    Vector2 startTouchPosition;
+    Vector2 startTouchPosition, swipeDelta;
     Vector3 currentRotation;
 
     bool isSwiping = false;
 
     void Start()
     {
-        currentRotation = transform.rotation.eulerAngles;
+        currentRotation = transform.eulerAngles;
     }
 
     void Update()
@@ -32,29 +31,43 @@ public class RotateCamera : MonoBehaviour
             }
             else if (Input.touches[0].phase == TouchPhase.Canceled || Input.touches[0].phase == TouchPhase.Ended)
             {
-                isSwiping = false;
+                Reset();
             }
         }
 
-        // Calculate swipeDelta only if the touch moved beyond the threshold
-        if (isSwiping && (Input.touches[0].position - startTouchPosition).magnitude > swipeThreshold)
+        // Calculating swipeDelta
+        swipeDelta = Vector2.zero;
+        if (isSwiping)
         {
-            Vector2 swipeDelta = Input.touches[0].position - startTouchPosition;
+            if (Input.touchCount > 0)
+            {
+                swipeDelta = Input.touches[0].position - startTouchPosition;
+            }
+        }
+
+        // Did we cross the deadzone?
+        if (swipeDelta.magnitude > 125)
+        {
+            // Which direction?
+            float x = swipeDelta.x;
+            float y = swipeDelta.y;
 
             // Calculate new rotation and clamp it
-            currentRotation.y -= swipeDelta.x * speed;
+            currentRotation.y -= x * speed;
             currentRotation.y = Mathf.Clamp(currentRotation.y, minX, maxX);
-            currentRotation.x += swipeDelta.y * speed;
+            currentRotation.x += y * speed;
             currentRotation.x = Mathf.Clamp(currentRotation.x, minY, maxY);
 
             // Apply rotation
             transform.rotation = Quaternion.Euler(currentRotation);
-
-            // Update the startTouchPosition for the next frame
-            startTouchPosition = Input.touches[0].position;
         }
     }
 
+    private void Reset()
+    {
+        startTouchPosition = swipeDelta = Vector2.zero;
+        isSwiping = false;
+    }
     public void SetCustomRotation(Vector3 newRotation)
     {
         currentRotation = newRotation;
