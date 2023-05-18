@@ -19,6 +19,7 @@ public class ZooStageController : MonoBehaviour
     [SerializeField] private bool IsCustomCameraRotationIsOn = false;
     [SerializeField] private Quaternion customCameraRotation = new Quaternion();
 
+    [SerializeField] private Material skyboxMaterial;
   
     List<GameObject> AnchorPoints = new List<GameObject>();
 
@@ -26,7 +27,7 @@ public class ZooStageController : MonoBehaviour
     Camera mainCamera = null;
     private Vector3 prevCameraPosition = new Vector3();
     private Quaternion prevCameraRotation;
-
+    
 
     private List<GameObject> _animalsOnStage;
 
@@ -34,8 +35,12 @@ public class ZooStageController : MonoBehaviour
 
     private void OnEnable()
     {
+        if (skyboxMaterial!=null)
+        {
+            RenderSettings.skybox = skyboxMaterial;
+            DynamicGI.UpdateEnvironment();
+        }
         AnchorPointScript[] objects = FindObjectsOfType<AnchorPointScript>();
-
         // Add each object with the component to the list
         foreach (AnchorPointScript objectWithComponent in objects) {
             AnchorPoints.Add(objectWithComponent.gameObject);
