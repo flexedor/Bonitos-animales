@@ -17,7 +17,9 @@ public class ZooStageController : MonoBehaviour
     [SerializeField] private Vector3 customStagePosition = new Vector3();
 
     [SerializeField] private bool IsCustomCameraRotationIsOn = false;
-    [SerializeField] private Quaternion customCameraRotation = new Quaternion();
+    [SerializeField] private Vector3 customCameraRotation = new Vector3();
+
+    [SerializeField] private float rotMinX=-61f, rotMaxX=61f, rotMinY=-61f, rotMaxY=61f;
 
     [SerializeField] private Material skyboxMaterial;
   
@@ -33,13 +35,10 @@ public class ZooStageController : MonoBehaviour
 
     public GameData.Biomes stageBiome = GameData.Biomes.Mountains;
 
+    public static System.Action OnStageLoad;
     private void OnEnable()
     {
-        if (skyboxMaterial!=null)
-        {
-            RenderSettings.skybox = skyboxMaterial;
-            DynamicGI.UpdateEnvironment();
-        }
+      
         AnchorPointScript[] objects = FindObjectsOfType<AnchorPointScript>();
         // Add each object with the component to the list
         foreach (AnchorPointScript objectWithComponent in objects) {
@@ -56,15 +55,38 @@ public class ZooStageController : MonoBehaviour
 
 
         }
+       
+        SetCameraProperty();
+        setCameraPos();
+        setLevelPos();
+        setCameraRorarion();
+       
+        // OnStageLoad?.Invoke();
+    }
+
+    private void SetCameraProperty()
+    {
+        if (skyboxMaterial!=null)
+        {
+            RenderSettings.skybox = skyboxMaterial;
+            DynamicGI.UpdateEnvironment();
+        }
+        RotateCamera cameraRotator = FindObjectOfType<RotateCamera>();
+        if (cameraRotator != null)
+        {
+            Debug.Log("Found script on " + cameraRotator.gameObject.name);
+            cameraRotator.maxX = rotMaxX;
+            cameraRotator.maxY = rotMaxY;
+            cameraRotator.minX = rotMinX;
+            cameraRotator.minY = rotMinY;
+        }
+        
         // Find the main camera in the scene
         mainCamera = Camera.main;
         // Remember prev pos and rotation
         prevCameraPosition = mainCamera.transform.position;
         prevCameraRotation = mainCamera.transform.rotation;
         
-        setCameraPos();
-        setLevelPos();
-        setCameraRorarion();
     }
     
     private void OnDisable()
@@ -88,7 +110,11 @@ public class ZooStageController : MonoBehaviour
     {
         if (IsCustomCameraRotationIsOn)
         {
-            mainCamera.transform.rotation = customCameraRotation;
+           // mainCamera.transform.rotation = customCameraRotation;
+           // RotateCamera cameraRotator = FindObjectOfType<RotateCamera>();
+            RotateCamera cameraRotator = FindObjectOfType<RotateCamera>();
+            cameraRotator.SetCustomRotation(customCameraRotation);
+            
         }
     }
     private void setLevelPos()

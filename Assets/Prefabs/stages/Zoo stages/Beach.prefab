@@ -218,6 +218,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
+      propertyPath: rotMinX
+      value: -62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: stageBiome
       value: 2
       objectReference: {fileID: 0}

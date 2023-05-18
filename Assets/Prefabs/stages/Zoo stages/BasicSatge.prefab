@@ -52,4 +52,9 @@ MonoBehaviour:
   customStagePosition: {x: 0, y: 0, z: 0}
   IsCustomCameraRotationIsOn: 0
   customCameraRotation: {x: 0, y: 0, z: 0, w: 0}
+  rotMinX: -62
+  rotMaxX: 62
+  rotMinY: -62
+  rotMaxY: 62
+  skyboxMaterial: {fileID: 0}
   stageBiome: 3
