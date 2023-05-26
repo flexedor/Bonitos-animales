@@ -8,12 +8,12 @@ public class GameController : MonoBehaviour
 {
     public static GameController Instance;
 
-    enum StageState
+    public enum StageState
     {
         Zoo,
         Resquing 
     }
-    private StageState _curretStageState;
+    public StageState _curretStageState;
     
     [FormerlySerializedAs("Zoo Stages")] [SerializeField]
     private List<GameObject> zooStages;
@@ -45,8 +45,12 @@ public class GameController : MonoBehaviour
         }
     }
     private GameObject _currentStageObstical;
-    
-    
+
+    private void Start()
+    {
+        Instance = this;
+    }
+
     private void Awake()
     {
         UIMenuController.onZooBtn += SwitchToZoo;

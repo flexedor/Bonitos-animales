@@ -12,16 +12,20 @@ public class RotateCamera : MonoBehaviour
 
     Vector2 startTouchPosition, swipeDelta;
     Vector3 currentRotation;
+    private GameController _gameController;
 
     bool isSwiping = false;
 
     void Start()
     {
         currentRotation = transform.eulerAngles;
+        _gameController = FindObjectOfType<GameController>();
     }
 
     void Update()
     {
+        if (_gameController._curretStageState == GameController.StageState.Resquing) return;
+
         if (Input.touchCount > 0)
         {
             if (Input.touches[0].phase == TouchPhase.Began)

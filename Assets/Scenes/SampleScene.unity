@@ -2770,12 +2770,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 411c983ba8468124495bb0aa4a94bc10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.002
+  speed: 0.2
   minY: -60
   maxY: 60
   minX: -60
   maxX: 60
-  swipeThreshold: 50
 --- !u!1 &994135238
 GameObject:
   m_ObjectHideFlags: 0
@@ -3023,7 +3022,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999805458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79bdf35d3f51849479f38da47da8a01b, type: 3}
   m_Name: 
