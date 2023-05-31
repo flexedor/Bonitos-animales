@@ -49,7 +49,8 @@ public class ZooStageController : MonoBehaviour
         {
             if (i < 0 || i >= AnchorPoints.Count) continue;
             Vector3 position = AnchorPoints[i].transform.position;
-            GameObject tmp_animal = Instantiate(animalsInCurrentBiom[i], position,  Quaternion.identity,transform);
+            Quaternion rotation = AnchorPoints[i].transform.rotation;
+            GameObject tmp_animal = Instantiate(animalsInCurrentBiom[i], position,  rotation, transform);
             _animalsOnStage?.Add( tmp_animal);
 
 
@@ -79,6 +80,7 @@ public class ZooStageController : MonoBehaviour
             cameraRotator.maxY = rotMaxY;
             cameraRotator.minX = rotMinX;
             cameraRotator.minY = rotMinY;
+            cameraRotator.speed = 0.002f;
         }
         
         // Find the main camera in the scene

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class RotateCamera : MonoBehaviour
 {
-    public float speed = 0.1f;
-    public float minY = -60f;
-    public float maxY = 60f;
-    public float minX = -60f;
-    public float maxX = 60f;
+    public float speed = 0.000002f;
+    public float minY = -30f;
+    public float maxY = 30f;
+    public float minX = -1f;
+    public float maxX = 1f;
 
     Vector2 startTouchPosition, swipeDelta;
     Vector3 currentRotation;
@@ -50,7 +50,7 @@ public class RotateCamera : MonoBehaviour
         }
 
         // Did we cross the deadzone?
-        if (swipeDelta.magnitude > 125)
+        if (swipeDelta.magnitude > 1)
         {
             // Which direction?
             float x = swipeDelta.x;
@@ -59,8 +59,8 @@ public class RotateCamera : MonoBehaviour
             // Calculate new rotation and clamp it
             currentRotation.y -= x * speed;
             currentRotation.y = Mathf.Clamp(currentRotation.y, minX, maxX);
-            currentRotation.x += y * speed;
-            currentRotation.x = Mathf.Clamp(currentRotation.x, minY, maxY);
+            //currentRotation.x += y * speed;
+            //currentRotation.x = Mathf.Clamp(currentRotation.x, minY, maxY);
 
             // Apply rotation
             transform.rotation = Quaternion.Euler(currentRotation);
