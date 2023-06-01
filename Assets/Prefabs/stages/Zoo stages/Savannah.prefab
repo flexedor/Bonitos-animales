@@ -1019,6 +1019,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1042118303835558316}
     m_Modifications:
+    - target: {fileID: 539108023401359425, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
+      propertyPath: animal
+      value: 
+      objectReference: {fileID: 5461646689526787487, guid: 42e0b63484efaea48a7f373ee43ffae1, type: 3}
     - target: {fileID: 4687076755990576174, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2231,6 +2235,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1042118303835558316}
     m_Modifications:
+    - target: {fileID: 539108023401359425, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
+      propertyPath: animal
+      value: 
+      objectReference: {fileID: 5461646689526787487, guid: 8b768bd9018ea794bac61a8b7c7cd769, type: 3}
     - target: {fileID: 4687076755990576174, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2293,6 +2301,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1042118303835558316}
     m_Modifications:
+    - target: {fileID: 539108023401359425, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
+      propertyPath: animal
+      value: 
+      objectReference: {fileID: 5461646689526787487, guid: 42e0b63484efaea48a7f373ee43ffae1, type: 3}
     - target: {fileID: 4687076755990576174, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2355,6 +2367,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1042118303835558316}
     m_Modifications:
+    - target: {fileID: 539108023401359425, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
+      propertyPath: animal
+      value: 
+      objectReference: {fileID: 5461646689526787487, guid: 8b768bd9018ea794bac61a8b7c7cd769, type: 3}
     - target: {fileID: 4687076755990576174, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -3161,7 +3177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.size
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.data[0]
@@ -3170,15 +3186,15 @@ PrefabInstance:
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.data[1]
       value: 
-      objectReference: {fileID: 5461646689526787487, guid: 42e0b63484efaea48a7f373ee43ffae1, type: 3}
+      objectReference: {fileID: 5461646689526787487, guid: 8b768bd9018ea794bac61a8b7c7cd769, type: 3}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.data[2]
       value: 
-      objectReference: {fileID: 5461646689526787487, guid: 8b768bd9018ea794bac61a8b7c7cd769, type: 3}
+      objectReference: {fileID: 5461646689526787487, guid: bf4c3e66af435bb4ab8bee05cfcac5ba, type: 3}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.data[3]
       value: 
-      objectReference: {fileID: 5461646689526787487, guid: 8b768bd9018ea794bac61a8b7c7cd769, type: 3}
+      objectReference: {fileID: 5461646689526787487, guid: bf4c3e66af435bb4ab8bee05cfcac5ba, type: 3}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.data[4]
       value: 
@@ -3565,6 +3581,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1042118303835558316}
     m_Modifications:
+    - target: {fileID: 539108023401359425, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
+      propertyPath: animal
+      value: 
+      objectReference: {fileID: 5461646689526787487, guid: bf4c3e66af435bb4ab8bee05cfcac5ba, type: 3}
     - target: {fileID: 4687076755990576174, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4067,6 +4087,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1042118303835558316}
     m_Modifications:
+    - target: {fileID: 539108023401359425, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
+      propertyPath: animal
+      value: 
+      objectReference: {fileID: 5461646689526787487, guid: bf4c3e66af435bb4ab8bee05cfcac5ba, type: 3}
     - target: {fileID: 4687076755990576174, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -39,22 +40,25 @@ public class ZooStageController : MonoBehaviour
     private void OnEnable()
     {
       
-        AnchorPointScript[] objects = FindObjectsOfType<AnchorPointScript>();
+        List<AnchorPointScript> objects = FindObjectsOfType<AnchorPointScript>().ToList();
         // Add each object with the component to the list
-        foreach (AnchorPointScript objectWithComponent in objects) {
-            AnchorPoints.Add(objectWithComponent.gameObject);
-        }
+        
 
         for (int i = 0; i < animalsInCurrentBiom.Count; i++)
         {
-            if (i < 0 || i >= AnchorPoints.Count) continue;
-            Vector3 position = AnchorPoints[i].transform.position;
-            Quaternion rotation = AnchorPoints[i].transform.rotation;
-            GameObject tmp_animal = Instantiate(animalsInCurrentBiom[i], position,  rotation, transform);
-            _animalsOnStage?.Add( tmp_animal);
-
-
-
+            for (int j=0; j < objects.Count(); j++)
+            {
+                if (GameObject.ReferenceEquals(objects[j].animal, animalsInCurrentBiom[i]))
+                {
+                    Vector3 position = objects[j].gameObject.transform.position;
+                    Quaternion rotation = objects[j].gameObject.transform.rotation;
+                    GameObject tmp_animal = Instantiate(animalsInCurrentBiom[i], position, rotation, transform);
+                    _animalsOnStage?.Add(tmp_animal);
+                    objects.Remove(objects[j]);
+                    continue;
+                }
+                
+            }
         }
        
         SetCameraProperty();

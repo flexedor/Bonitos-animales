@@ -49,8 +49,8 @@ MonoBehaviour:
   _feed: 20
   _pet: 30
   _clean: 40
-  _name: Sheep
-  animalBiome: 0
+  _name: Giraffe
+  animalBiome: 1
   instantiateGameObject: {fileID: 5461646689526787487}
 --- !u!65 &-480175462757922840
 BoxCollider:
@@ -63,8 +63,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.011, y: 0.01, z: 0.01}
-  m_Center: {x: 0, y: 0, z: -0.004}
+  m_Size: {x: 0.025568618, y: 0.14987999, z: 0.10744001}
+  m_Center: {x: -0.00083122787, y: 0.069939956, z: -0.024796804}
 --- !u!1001 &7059660305391592491
 PrefabInstance:
   m_ObjectHideFlags: 0

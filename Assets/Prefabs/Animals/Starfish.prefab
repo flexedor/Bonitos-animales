@@ -49,8 +49,8 @@ MonoBehaviour:
   _feed: 20
   _pet: 30
   _clean: 40
-  _name: Sheep
-  animalBiome: 0
+  _name: Starfish
+  animalBiome: 2
   instantiateGameObject: {fileID: 5461646689526787487}
 --- !u!65 &-480175462757922840
 BoxCollider:
@@ -63,8 +63,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.011, y: 0.01, z: 0.01}
-  m_Center: {x: 0, y: 0, z: -0.004}
+  m_Size: {x: 0.019175949, y: 0.0075604296, z: 0.019291889}
+  m_Center: {x: -0.0010067689, y: -0.0012197777, z: 0.00064596476}
 --- !u!1001 &2419603052144126723
 PrefabInstance:
   m_ObjectHideFlags: 0

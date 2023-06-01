@@ -489,6 +489,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8354882529074141057}
     m_Modifications:
+    - target: {fileID: 539108023401359425, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
+      propertyPath: animal
+      value: 
+      objectReference: {fileID: 5461646689526787487, guid: 7c5789487f95b9646be109506ac332c3, type: 3}
     - target: {fileID: 4687076755990576174, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -971,6 +975,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8354882529074141057}
     m_Modifications:
+    - target: {fileID: 539108023401359425, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
+      propertyPath: animal
+      value: 
+      objectReference: {fileID: 5461646689526787487, guid: 7c5789487f95b9646be109506ac332c3, type: 3}
     - target: {fileID: 4687076755990576174, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1911,6 +1919,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8354882529074141057}
     m_Modifications:
+    - target: {fileID: 539108023401359425, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
+      propertyPath: animal
+      value: 
+      objectReference: {fileID: 5461646689526787487, guid: 4f7ed163ce68cbc40af2a42c7542da56, type: 3}
     - target: {fileID: 4687076755990576174, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2751,6 +2763,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8354882529074141057}
     m_Modifications:
+    - target: {fileID: 539108023401359425, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
+      propertyPath: animal
+      value: 
+      objectReference: {fileID: 5461646689526787487, guid: 0f23a96347ac06a4b95d7f9e10366bd6, type: 3}
     - target: {fileID: 4687076755990576174, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3473,36 +3489,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.size
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.data[0]
       value: 
-      objectReference: {fileID: 5461646689526787487, guid: 0f23a96347ac06a4b95d7f9e10366bd6, type: 3}
+      objectReference: {fileID: 5461646689526787487, guid: 4f7ed163ce68cbc40af2a42c7542da56, type: 3}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.data[1]
       value: 
-      objectReference: {fileID: 5461646689526787487, guid: 0f23a96347ac06a4b95d7f9e10366bd6, type: 3}
+      objectReference: {fileID: 5461646689526787487, guid: 7c5789487f95b9646be109506ac332c3, type: 3}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.data[2]
       value: 
-      objectReference: {fileID: 5461646689526787487, guid: 4f7ed163ce68cbc40af2a42c7542da56, type: 3}
+      objectReference: {fileID: 5461646689526787487, guid: 0f23a96347ac06a4b95d7f9e10366bd6, type: 3}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.data[3]
       value: 
-      objectReference: {fileID: 5461646689526787487, guid: 4f7ed163ce68cbc40af2a42c7542da56, type: 3}
+      objectReference: {fileID: 5461646689526787487, guid: 0f23a96347ac06a4b95d7f9e10366bd6, type: 3}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.data[4]
       value: 
-      objectReference: {fileID: 5461646689526787487, guid: 7c5789487f95b9646be109506ac332c3, type: 3}
+      objectReference: {fileID: 5461646689526787487, guid: 0f23a96347ac06a4b95d7f9e10366bd6, type: 3}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.data[5]
       value: 
-      objectReference: {fileID: 5461646689526787487, guid: 7c5789487f95b9646be109506ac332c3, type: 3}
+      objectReference: {fileID: 5461646689526787487, guid: 0f23a96347ac06a4b95d7f9e10366bd6, type: 3}
     - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: animalsInCurrentBiom.Array.data[6]
       value: 
-      objectReference: {fileID: 5461646689526787487, guid: 4f7ed163ce68cbc40af2a42c7542da56, type: 3}
+      objectReference: {fileID: 5461646689526787487, guid: 0f23a96347ac06a4b95d7f9e10366bd6, type: 3}
+    - target: {fileID: 2799757484943888997, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
+      propertyPath: animalsInCurrentBiom.Array.data[7]
+      value: 
+      objectReference: {fileID: 5461646689526787487, guid: 0f23a96347ac06a4b95d7f9e10366bd6, type: 3}
     - target: {fileID: 9004387949639837792, guid: 76d1b0403ca940a48bb9b367b303e1c4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3639,6 +3659,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8354882529074141057}
     m_Modifications:
+    - target: {fileID: 539108023401359425, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
+      propertyPath: animal
+      value: 
+      objectReference: {fileID: 5461646689526787487, guid: 4f7ed163ce68cbc40af2a42c7542da56, type: 3}
     - target: {fileID: 4687076755990576174, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -4109,6 +4133,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8354882529074141057}
     m_Modifications:
+    - target: {fileID: 539108023401359425, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
+      propertyPath: animal
+      value: 
+      objectReference: {fileID: 5461646689526787487, guid: 0f23a96347ac06a4b95d7f9e10366bd6, type: 3}
     - target: {fileID: 4687076755990576174, guid: c5c57ce0b0d53e441b472b0c2013f008, type: 3}
       propertyPath: m_RootOrder
       value: 5

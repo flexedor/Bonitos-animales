@@ -49,8 +49,8 @@ MonoBehaviour:
   _feed: 20
   _pet: 30
   _clean: 40
-  _name: Sheep
-  animalBiome: 0
+  _name: Urchin
+  animalBiome: 2
   instantiateGameObject: {fileID: 5461646689526787487}
 --- !u!65 &-480175462757922840
 BoxCollider:
@@ -63,8 +63,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.011, y: 0.01, z: 0.01}
-  m_Center: {x: 0, y: 0, z: -0.004}
+  m_Size: {x: 0.023733629, y: 0.0165058, z: 0.01774197}
+  m_Center: {x: -0.000045140383, y: 0.0032529098, z: -0.00012899398}
 --- !u!1001 &7668936046036664399
 PrefabInstance:
   m_ObjectHideFlags: 0

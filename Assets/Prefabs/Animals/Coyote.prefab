@@ -49,8 +49,8 @@ MonoBehaviour:
   _feed: 20
   _pet: 30
   _clean: 40
-  _name: Sheep
-  animalBiome: 0
+  _name: Coyote
+  animalBiome: 4
   instantiateGameObject: {fileID: 5461646689526787487}
 --- !u!65 &-480175462757922840
 BoxCollider:
@@ -61,10 +61,10 @@ BoxCollider:
   m_GameObject: {fileID: 5461646689526787487}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.011, y: 0.01, z: 0.01}
-  m_Center: {x: 0, y: 0, z: -0.004}
+  m_Size: {x: 0.011, y: 0.04201491, z: 0.053896256}
+  m_Center: {x: 0, y: 0.01600746, z: 0.0031839812}
 --- !u!1001 &1795548635557680667
 PrefabInstance:
   m_ObjectHideFlags: 0
