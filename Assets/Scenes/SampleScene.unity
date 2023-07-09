@@ -1025,7 +1025,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 150, y: 150}
+  m_AnchoredPosition: {x: 243, y: 245}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &324216240
@@ -2143,7 +2143,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -150, y: 150}
+  m_AnchoredPosition: {x: -250, y: 243}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &857567161
@@ -2656,14 +2656,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.5652333, y: -0, z: -0, w: 0.82493114}
-  m_LocalPosition: {x: 0, y: 8.4, z: -5}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 8.4, z: 0.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 68.837, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2917,11 +2917,11 @@ MonoBehaviour:
   - {fileID: 1613637316290655706, guid: c54d28f4126482a409a252d45ba55983, type: 3}
   - {fileID: 2786519909743400159, guid: c7b49320317501246a5a0ac1b84bacde, type: 3}
   resquingStages:
-  - {fileID: 3030085771726436790, guid: 5feb4d161767b10439ebb42b0546de99, type: 3}
-  - {fileID: 3030085771726436790, guid: 1d635b9f4a8987145bd4f0c2071aeb06, type: 3}
-  - {fileID: 3030085771726436790, guid: cddafe7792878d24cb5d98d8d75dd64d, type: 3}
-  - {fileID: 3030085771726436790, guid: 1ab8274a2a0434e469a65496f496a53f, type: 3}
   - {fileID: 3030085771726436790, guid: 60e8b4cf8a4bd1b40b432214f3f30ad0, type: 3}
+  - {fileID: 3030085771726436790, guid: 1ab8274a2a0434e469a65496f496a53f, type: 3}
+  - {fileID: 3030085771726436790, guid: 1d635b9f4a8987145bd4f0c2071aeb06, type: 3}
+  - {fileID: 3030085771726436790, guid: 5feb4d161767b10439ebb42b0546de99, type: 3}
+  - {fileID: 3030085771726436790, guid: cddafe7792878d24cb5d98d8d75dd64d, type: 3}
   - {fileID: 3030085771726436790, guid: 6d49102001559b14995216782c7602a3, type: 3}
   - {fileID: 3030085771726436790, guid: c0389adb747433248b1b5856ca9eb7a8, type: 3}
   - {fileID: 3030085771726436790, guid: 741deb97c84e6cf4699b8147ed6b9f67, type: 3}
@@ -3941,6 +3941,7 @@ GameObject:
   - component: {fileID: 1400922657}
   - component: {fileID: 1400922656}
   - component: {fileID: 1400922655}
+  - component: {fileID: 1400922658}
   m_Layer: 5
   m_Name: Right
   m_TagString: Untagged
@@ -4011,19 +4012,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1400922656}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1982041818}
-        m_TargetAssemblyTypeName: ResquingStageButtons, Assembly-CSharp
-        m_MethodName: onMoveRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1400922656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4062,6 +4051,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400922653}
   m_CullTransparentMesh: 1
+--- !u!114 &1400922658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400922653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1982041818}
+          m_TargetAssemblyTypeName: ResquingStageButtons, Assembly-CSharp
+          m_MethodName: onMoveRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1982041818}
+          m_TargetAssemblyTypeName: ResquingStageButtons, Assembly-CSharp
+          m_MethodName: rightRelease
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1403502182
 GameObject:
   m_ObjectHideFlags: 0
@@ -5039,6 +5073,7 @@ GameObject:
   - component: {fileID: 1718558050}
   - component: {fileID: 1718558049}
   - component: {fileID: 1718558048}
+  - component: {fileID: 1718558051}
   m_Layer: 5
   m_Name: Left
   m_TagString: Untagged
@@ -5109,19 +5144,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1718558049}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1982041818}
-        m_TargetAssemblyTypeName: ResquingStageButtons, Assembly-CSharp
-        m_MethodName: onMoveLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1718558049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5160,6 +5183,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718558046}
   m_CullTransparentMesh: 1
+--- !u!114 &1718558051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718558046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1982041818}
+          m_TargetAssemblyTypeName: ResquingStageButtons, Assembly-CSharp
+          m_MethodName: onMoveLeft
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1982041818}
+          m_TargetAssemblyTypeName: ResquingStageButtons, Assembly-CSharp
+          m_MethodName: leftRelease
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1726333344
 GameObject:
   m_ObjectHideFlags: 0
@@ -5739,6 +5807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 889a54283eb7a19408348ce83c1f8840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dir: 0
 --- !u!1 &2032302528
 GameObject:
   m_ObjectHideFlags: 0

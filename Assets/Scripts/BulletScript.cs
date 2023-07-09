@@ -16,7 +16,6 @@ public class BulletScript : MonoBehaviour
         if (brickScript != null)
         {
             Destroy(brickScript.gameObject);
-            Destroy(this.gameObject);
         }
         if (animalScript != null)
         {

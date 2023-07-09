@@ -15,6 +15,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Seal
       objectReference: {fileID: 0}
+    - target: {fileID: 5810049564439036460, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 32.663803
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810049564439036460, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 16.746048
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810049564439036460, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 16.746048
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810049564439036460, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810049564439036460, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6973607588088648233, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -497,6 +517,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5087899271138158552}
     m_Modifications:
+    - target: {fileID: -480175462757922840, guid: 4f7ed163ce68cbc40af2a42c7542da56, type: 3}
+      propertyPath: m_Size.x
+      value: 0.03301747
+      objectReference: {fileID: 0}
+    - target: {fileID: -480175462757922840, guid: 4f7ed163ce68cbc40af2a42c7542da56, type: 3}
+      propertyPath: m_Size.y
+      value: 0.034122884
+      objectReference: {fileID: 0}
+    - target: {fileID: -480175462757922840, guid: 4f7ed163ce68cbc40af2a42c7542da56, type: 3}
+      propertyPath: m_Size.z
+      value: 0.06482407
+      objectReference: {fileID: 0}
+    - target: {fileID: -480175462757922840, guid: 4f7ed163ce68cbc40af2a42c7542da56, type: 3}
+      propertyPath: m_Center.x
+      value: 0.00002448082
+      objectReference: {fileID: 0}
+    - target: {fileID: -480175462757922840, guid: 4f7ed163ce68cbc40af2a42c7542da56, type: 3}
+      propertyPath: m_Center.y
+      value: 0.017815743
+      objectReference: {fileID: 0}
+    - target: {fileID: -480175462757922840, guid: 4f7ed163ce68cbc40af2a42c7542da56, type: 3}
+      propertyPath: m_Center.z
+      value: 0.004992356
+      objectReference: {fileID: 0}
     - target: {fileID: 4647849053497784101, guid: 4f7ed163ce68cbc40af2a42c7542da56, type: 3}
       propertyPath: m_RootOrder
       value: 3

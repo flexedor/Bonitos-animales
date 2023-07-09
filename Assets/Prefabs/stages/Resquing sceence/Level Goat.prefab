@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Goat
       objectReference: {fileID: 0}
+    - target: {fileID: 5810049564439036460, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.63
+      objectReference: {fileID: 0}
     - target: {fileID: 6973607588088648233, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -383,6 +387,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5087899271138158552}
     m_Modifications:
+    - target: {fileID: -480175462757922840, guid: bb084a4f30e8af14187de1d1aac72ef6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.046559084
+      objectReference: {fileID: 0}
+    - target: {fileID: -480175462757922840, guid: bb084a4f30e8af14187de1d1aac72ef6, type: 3}
+      propertyPath: m_Size.y
+      value: 0.050186995
+      objectReference: {fileID: 0}
+    - target: {fileID: -480175462757922840, guid: bb084a4f30e8af14187de1d1aac72ef6, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0006978033
+      objectReference: {fileID: 0}
+    - target: {fileID: -480175462757922840, guid: bb084a4f30e8af14187de1d1aac72ef6, type: 3}
+      propertyPath: m_Center.z
+      value: 0.0030557849
+      objectReference: {fileID: 0}
     - target: {fileID: 4647849053497784101, guid: bb084a4f30e8af14187de1d1aac72ef6, type: 3}
       propertyPath: m_RootOrder
       value: 3

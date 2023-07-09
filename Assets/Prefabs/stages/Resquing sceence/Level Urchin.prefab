@@ -15,6 +15,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Urchin
       objectReference: {fileID: 0}
+    - target: {fileID: 5810049564439036460, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 11.417374
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810049564439036460, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 11.417374
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810049564439036460, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 11.417374
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810049564439036460, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.197
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810049564439036460, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5810049564439036460, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 6973607588088648233, guid: 36b4cf3ee3ae3924da69fc3be5cf0983, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -383,6 +407,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5087899271138158552}
     m_Modifications:
+    - target: {fileID: -480175462757922840, guid: c85a7e388dc039b4288969079f13edf8, type: 3}
+      propertyPath: m_Size.x
+      value: 0.03928264
+      objectReference: {fileID: 0}
+    - target: {fileID: -480175462757922840, guid: c85a7e388dc039b4288969079f13edf8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.03916519
+      objectReference: {fileID: 0}
+    - target: {fileID: -480175462757922840, guid: c85a7e388dc039b4288969079f13edf8, type: 3}
+      propertyPath: m_Size.z
+      value: 0.03971145
+      objectReference: {fileID: 0}
+    - target: {fileID: -480175462757922840, guid: c85a7e388dc039b4288969079f13edf8, type: 3}
+      propertyPath: m_Center.x
+      value: 0.0030561602
+      objectReference: {fileID: 0}
+    - target: {fileID: -480175462757922840, guid: c85a7e388dc039b4288969079f13edf8, type: 3}
+      propertyPath: m_Center.y
+      value: 0.014582605
+      objectReference: {fileID: 0}
+    - target: {fileID: -480175462757922840, guid: c85a7e388dc039b4288969079f13edf8, type: 3}
+      propertyPath: m_Center.z
+      value: -0.00049345713
+      objectReference: {fileID: 0}
     - target: {fileID: 4647849053497784101, guid: c85a7e388dc039b4288969079f13edf8, type: 3}
       propertyPath: m_RootOrder
       value: 3
